@@ -260,6 +260,17 @@ body {
   cursor: pointer;
 }
 
+.scrollbar {
+  padding-left: 6px;
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
 /* style start */
 
 nav {
@@ -282,7 +293,12 @@ nav {
   }
 }
 
+#main-app {
+  height: 100%;
+}
+
 #main-content {
+  height: 100%;
   margin-left: 60px;
   display: flex;
 }
@@ -292,6 +308,8 @@ nav {
   background: $white;
   @extend %standard-boxshadow;
   z-index: 20;
+  height: 100%;
+  overflow-y: scroll;
 
   .flex-row {
     display: flex;
