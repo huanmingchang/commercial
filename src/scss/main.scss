@@ -160,6 +160,14 @@ $spacers: (
   }
 }
 
+@mixin getStepNums($num) {
+  @for $i from 1 through $num {
+    &:nth-child(#{$i}) .circle-container:after {
+      content: '#{$i}';
+    }
+  }
+}
+
 %standard-boxshadow {
   box-shadow: 3px 0 13px 0 rgba(100, 112, 134, 0.1);
 }
@@ -361,4 +369,55 @@ nav {
 
 .right-content {
   flex: 1;
+}
+
+.stepper-panel {
+  height: 120px;
+  .stepper-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 40px;
+  }
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  flex: 1;
+  @include getStepNums(3);
+  .circle-container {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: $light-gray;
+    color: $dark-gray;
+    margin: 0 auto;
+  }
+  .label-container {
+    margin-top: 10px;
+    color: $light-gray;
+  }
+  &.checked,
+  &.active {
+    .circle-container {
+      background-color: $freedom-blue;
+      color: $body-color;
+    }
+    .label-container {
+      color: $body-color;
+    }
+  }
+  &.checked .circle-container::after {
+    content: '\2714';
+  }
+  .connect-line {
+    position: absolute;
+    top: 12px;
+    right: calc(50% + 20px);
+    left: calc(-50% + 20px);
+    display: block;
+    height: 1px;
+    background-color: $light-gray;
+  }
 }
