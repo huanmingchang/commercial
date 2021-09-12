@@ -40,7 +40,7 @@
         </div>
         <div class="right-content">
           <div id="step-control" class="stepper-panel">
-            <div class="stepper-container">
+            <div class="container stepper-container">
               <div class="step checked">
                 <div class="circle-container"></div>
                 <div class="label-container">啟用廣告服務</div>
@@ -57,14 +57,35 @@
               </div>
             </div>
           </div>
-          <div class="form-panel">
-            <div class="form-container">
+          <div class="form-panel scrollbar">
+            <div class="container form-container">
               <form id="a-form">
                 <div class="form-content">
                   <div class="part">
                     <h4>廣告服務條款</h4>
-                    <div class="terms-panel">
+                    <div class="terms-panel scrollbar my-2">
                       <div class="terms-content">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Donec pretium ante erat, vitae sodales mi varius
+                          quis. Etiam vestibulum lorem vel urna tempor, eu
+                          fermentum odio aliquam. Aliquam consequat urna vitae
+                          ipsum pulvinar, in blandit purus eleifend.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Donec pretium ante erat, vitae sodales mi varius
+                          quis. Etiam vestibulum lorem vel urna tempor, eu
+                          fermentum odio aliquam. Aliquam consequat urna vitae
+                          ipsum pulvinar, in blandit purus eleifend.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Donec pretium ante erat, vitae sodales mi varius
+                          quis. Etiam vestibulum lorem vel urna tempor, eu
+                          fermentum odio aliquam. Aliquam consequat urna vitae
+                          ipsum pulvinar, in blandit purus eleifend.
+                        </p>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Donec pretium ante erat, vitae sodales mi varius
@@ -88,7 +109,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="form-row">
+                    <div class="form-row d-flex align-items-center">
                       <input id="terms-check" type="checkbox" />
                       <label for=""
                         >我已詳細閱讀以上條款內容，並同意接受內容所有款項規定</label
@@ -102,54 +123,70 @@
                         id="a-time-start"
                         name="a-time-start"
                         type="date"
+                        required
                       />
-                      - <input id="a-time-end" name="a-time-end" type="date" />
+                      -
+                      <input
+                        id="a-time-end"
+                        name="a-time-end"
+                        type="date"
+                        required
+                      />
                     </div>
                     <div class="form-row">
                       <label>廣告類別</label>
-                      <select name="a-type" id="a-type">
-                        <option value="" disabled selected>
-                          請選擇廣告類別
-                        </option>
-                        <option value="game">遊戲</option>
-                        <option value="fashion">時尚</option>
-                        <option value="travel">旅遊</option>
-                        <option value="shopping">購物</option>
-                        <option value="all">不拘</option>
-                      </select>
+                      <div class="select-wrapper">
+                        <select name="a-type" id="a-type" required>
+                          <option value="" disabled selected>
+                            請選擇廣告類別
+                          </option>
+                          <option value="game">遊戲</option>
+                          <option value="fashion">時尚</option>
+                          <option value="travel">旅遊</option>
+                          <option value="shopping">購物</option>
+                          <option value="all">不拘</option>
+                        </select>
+                      </div>
                     </div>
                     <div class="form-row">
                       <label for="">受眾性別</label>
-                      <input name="ta-gender" type="radio" value="male" /><label
-                        for=""
-                        >男</label
-                      >
-                      <input
-                        name="ta-gender"
-                        type="radio"
-                        value="female"
-                      /><label for="">女</label>
-                      <input name="ta-gender" type="radio" value="all" /><label
-                        for=""
-                        >不拘</label
-                      >
+                      <div class="d-flex align-items-center">
+                        <input
+                          name="ta-gender"
+                          type="radio"
+                          value="male"
+                        /><label for="">男</label>
+                        <input
+                          name="ta-gender"
+                          type="radio"
+                          value="female"
+                        /><label for="">女</label>
+                        <input
+                          name="ta-gender"
+                          type="radio"
+                          value="all"
+                        /><label for="">不拘</label>
+                      </div>
                     </div>
                     <div class="form-row">
-                      <label for="">受眾年齡</label><input type="number" /> -
-                      <input type="number" />
+                      <label for="">受眾年齡</label
+                      ><input type="number" min="13" max="65" value="13" /> -
+                      <input type="number" min="13" max="65" value="65" />
                     </div>
                     <div class="form-row">
                       <label for="">受眾地點</label>
-                      <select name="a-type" id="a-location">
-                        <option value="" disabled selected>
-                          請選擇受眾地點
-                        </option>
-                        <option value="">北部</option>
-                        <option value="">中部</option>
-                        <option value="">南部</option>
-                        <option value="">中部</option>
-                        <option value="">不拘</option>
-                      </select>
+                      <div class="select-wrapper">
+                        <select name="a-type" id="a-location" required>
+                          <option value="" disabled selected>
+                            請選擇受眾地點
+                          </option>
+                          <option value="">北部</option>
+                          <option value="">中部</option>
+                          <option value="">南部</option>
+                          <option value="">中部</option>
+                          <option value="">不拘</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                   <div class="part">
@@ -178,7 +215,7 @@
                       />
                     </div>
                     <div class="form-row">
-                      <label for="">備註</label><textarea id="note"></textarea>
+                      <label for="">備註</label><textarea id="note" class="scrollbar" rows="3"></textarea>
                     </div>
                   </div>
                 </div>
