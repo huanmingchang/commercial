@@ -41,11 +41,11 @@
         <div class="right-content">
           <div id="step-control" class="stepper-panel">
             <div class="container stepper-container">
-              <div class="step checked">
+              <div class="step active">
                 <div class="circle-container"></div>
                 <div class="label-container">啟用廣告服務</div>
               </div>
-              <div class="step active">
+              <div class="step">
                 <div class="circle-container"></div>
                 <span class="connect-line"></span>
                 <div class="label-container">廣告設定</div>
@@ -123,6 +123,7 @@
                         id="a-time-start"
                         name="a-time-start"
                         type="date"
+                        class="w-25"
                         required
                       />
                       -
@@ -130,6 +131,7 @@
                         id="a-time-end"
                         name="a-time-end"
                         type="date"
+                        class="w-25"
                         required
                       />
                     </div>
@@ -204,6 +206,7 @@
                         id="bank-account"
                         type="text"
                         placeholder="請輸入銀行帳號"
+                        class="w-50"
                       />
                     </div>
                     <div class="form-row">
@@ -218,7 +221,7 @@
                       <label for="">備註</label
                       ><textarea
                         id="note"
-                        class="scrollbar"
+                        class="scrollbar w-50"
                         rows="3"
                       ></textarea>
                     </div>
